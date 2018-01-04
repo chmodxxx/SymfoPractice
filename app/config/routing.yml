@@ -1,0 +1,15 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+app_home:
+    path: /
+    defaults: { _controller: AppBundle:Default:home}
+app_listposts:
+    path: /posts
+    defaults: { _controller: AppBundle:Default:listposts}
+app_view_upload_post:
+    path: /post/{id}
+    defaults: { _controller: AppBundle:Default:uploadpost, id: -1}
+app_searchpost:
+    path: /search
+    defaults: { _controller: AppBundle:Default:searchpost}

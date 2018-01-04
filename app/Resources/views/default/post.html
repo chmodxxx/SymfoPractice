@@ -1,0 +1,23 @@
+
+{% extends "default/base.html" %}
+
+{% block head %}
+<title>{{title}}</title>
+{{ parent() }}
+{% endblock %}
+
+{% block body %}
+    {% if id == -1 %}
+        {{ form_start(form) }}
+        {{ form_widget(form) }}
+        {{ form_end(form) }}
+        {{ msg }}
+    {% else %}
+        Post Title : {{ post.postName }} <br>
+        Description : {{ post.postDescription }}<br>
+        Post Date : {{ post.postDate }}
+    {% endif %}
+{% endblock %}
+
+{% block footer %}
+{% endblock %}

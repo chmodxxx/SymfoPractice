@@ -1,0 +1,45 @@
+<html>
+
+    <head>
+        <style>
+            li {
+                display: inline;
+                margin: 10px;
+            }
+            li a {
+                display: inline-block;
+                width: 100px;
+                padding: 5px 10px;
+                text-decoration: none;
+                color: #fff;
+                font-weight: bold;
+                background: #999;
+            }
+        </style>
+
+        {% block head %}
+            <ul>
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                    <li>
+                    <a href="/posts">Posts</a>
+                </li>
+                <li>
+                    <a href="/post">Post something</a>
+                </li>
+                <li>
+                    <a href="/search">Search a post</a>
+                </li>
+            </ul>
+        <hr><br><br>
+        {% endblock %}
+    </head>
+
+    <body>
+        {% block body %}
+
+        {% endblock %}
+    </body>
+
+</html>

@@ -1,0 +1,50 @@
+
+{% extends "default/base.html" %}
+
+{% block head %}
+    <title>{{title}}</title>
+    {{ parent() }}
+{% endblock %}
+
+{% block body %}
+    <table border="1" id="posts">
+         <tr>
+             <td>
+                Post Title
+             </td>
+             <td>
+                Post Description
+             </td>
+             <td>
+                Post Date
+             </td>
+             <td>
+                 Post Link
+             </td>
+
+         </tr>
+         {% for post in posts %}
+            <tr>
+                <td>
+                    {{ post.postName }}
+                </td>
+                <td>
+                    {{ post.postDescription }}
+                </td>
+                <td>
+                    {{ post.postDate }}
+                </td>
+                <td>
+                    <a href="/post/{{ post.id }}">Link</a>
+                </td>
+            </tr>
+         {% endfor %}
+
+
+
+    </table>
+
+{% endblock %}
+
+{% block footer %}
+{% endblock %}
